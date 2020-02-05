@@ -1,0 +1,377 @@
+:root{
+    --gd-color1: #d35602;
+    --gd-color2: #f63d02;
+    --gallery-color: #8C230F;
+}
+
+html, body {
+    background-color: black;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/*Add cover photo to front with fixed heights*/
+.jumbotron{
+    background: url(images/best.JPG) center center;
+    background-size: cover;
+    height: 600px;
+}
+/* style navbar*/
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.logo{
+    height: 30px;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: black;
+    background: #9e4848;
+}
+.dropdown-menu{
+    background: black;
+}
+#serchBox{
+    background: none;
+    border: none;
+}
+.name{
+    color: darkred;
+}
+/*style and animate hamburger menu*/
+.navbar .navbar-toggler-icon{
+    display: inline-block;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1{
+    -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3{
+    -webkit-transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-7px, -7px);
+}
+/*change text color in header*/
+.featured{
+    margin-top: 180px;
+}
+/*create space between avatar and text*/
+.featured h1{
+    padding-top: 60px;
+}
+/*style about me part and cv button*/
+hr { 
+    display: block;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+} 
+.aboutMe{
+    text-align: center;
+    color: #eee;
+    padding: 150px;
+    background: linear-gradient(45deg, black, gray 50%, black);
+}
+#myCV{
+    background: #9e4848;
+    width: 200px;
+    margin-top: 50px;
+    align-content: center;
+    padding: 10 70px;
+    color: black;
+    transition: all 2s ease-out;
+}
+#myCV:hover{
+    background: black;
+    color: white;
+    font-family: fantasy;
+}
+/*style businesscard part of page*/
+.businessCard{
+    font-family: arvo, serif;
+    height: auto;
+    background: url(https://freenaturestock.s3.us-east-1.amazonaws.com/1620.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.businessCardHeader{
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+    opacity: 0.6;
+}
+.bodyIcon{
+    height: 100px;
+}
+.col-md-4{
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+}
+/*style photogalery part of page*/
+.galleryContainer{
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(ellipse at center, #333, #333, #222);
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.galleryTitle{
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 30px;
+}
+.photoCard{
+    position: relative;
+    width: 150px;
+    height: 200px;
+    margin: 25px;
+}
+.galleryInfo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 10px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px 25px;
+    cursor: help;
+    clip-path: circle(5% at 89% 9%);
+    transition: background-color 500ms ease-in-out, clip-path 500ms ease-in-out;
+}
+.galleryInfo h2{
+    font-size: 20px;
+}
+.galleryInfo:hover{
+    background-color: var(--gallery-color);
+    clip-path: circle(70%);
+}
+.galleryInfo .infoIcon{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: color 500ms;
+}
+.galleryInfo:hover .infoIcon{
+    color: var(--gallery-color);
+}
+.photoCard .content{
+    overflow: hidden;
+    height: 100%;
+}
+.photoCard .image img{
+    max-width: 100%;
+    display: block;
+    filter: grayscale(100%) brightness(60%);
+    transition: 1s;
+}
+.photoCard .title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7) 50%);
+    padding: 30px 20px 20px;
+    font-size: 1rem;
+}
+.photoCard::before,
+.photoCard::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--gd-color1), var(--gd-color2));
+    filter: blur(30px);
+    opacity: 0;
+    z-index: -1;
+    transition: 1s;
+}
+.photoCard::after{
+    filter: blur(50px);
+}
+.photoCard:hover .image img{
+    filter: grayscale(0) brightness(100%);
+}
+.photoCard:hover::before,
+.photoCard:hover::after{
+    opacity: 1;
+    
+}
+/*style techstack part of page*/
+.tech{
+    text-align: center;
+    padding: 20px 0 40px 0;
+    color: black;
+    background: radial-gradient(circle at center, gray 0, #303030, black 90%);
+}
+.tech img{
+    width: 60px;
+    height: auto;
+    margin: 20px;
+}
+/*style footer*/
+.footer{
+    background-color: #9e4848;
+}
+.foot img{
+    height: 20px;
+    margin: 0 0 0 40%;
+}
+.contact{
+    display: flex;
+    font-size: 10px;
+    color: white;
+    align-items: center;
+}
+.contact p{
+    margin: 10px;
+    vertical-align: center;
+}
+.footer span{
+    font-size: 10px;
+    font-weight: 600;
+}
+/*style back to top button*/
+#toTop{
+    display: block;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.7);
+    width: 40px;
+    height: 40px;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#toTop i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 12px;
+    top: 10px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;;
+}
+#toTop:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.9);
+}
+#toTop:hover i{
+    color: #fff;
+    top: 5px;
+}
+
+/*styling for devices between 480 and 760px*/
+@media (min-width: 480px) and (max-width: 760px){
+    .jumbotron{
+        height: 450px;
+        margin: 0;
+    }
+    .featured h1{
+        padding-top: 10px;
+    }
+    .featured p, .featured a{
+        font-size: 17px;
+    }
+    .featured{
+        text-align: center;
+    }
+}
+/*styling for devices under 480px*/
+@media (max-width: 480px){
+    .jumbotron{
+        height: 550px;
+        margin: 0;
+    }
+    .container-fluid{
+        margin-top: -50px;
+    }
+    .featured h1{
+        padding-top: 5px;
+    }
+    .featured p, .featured a{
+        font-size: 10px;
+    }
+    .featured{
+        text-align: center;
+    }
+    .featured .btn-default{
+        margin-right: auto;
+    }
+    .galleryContainer{
+        height: auto;
+    }
+    .aboutMe{
+        padding: 50px;
+    }
+}
+/*styling for devices under 760*/
+@media (max-width:760px){
+    .jumbotron{
+        background: url(images/mobilePhoto.JPG) center center;
+        background-size: cover;
+    }
+    .col-md-9{
+        bottom: -150px;
+    }
+    .galleryContainer{
+        height: auto;
+    }
+}
+/*styling for devices under 960*/
+@media (max-width:1020px){
+    form{
+        visibility: hidden;
+    }
+     .featured{
+        text-align: center;
+    }
+    .jumbotron{
+        height: 550px;
+        margin: 5;
+    }
+    .galleryContainer{
+        height: auto;
+    }
+}
