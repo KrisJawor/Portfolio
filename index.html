@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+    <!-- styling css script -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    <title>Krzysztof Jaworski web developer</title>
+  </head>
+  <body data-spy="scroll" data-target=".navbar">
+        <!--create navigation-->
+      <nav class="navbar navbar-expand-lg  navbar-custom data-spy='affix'">
+        <a class="navbar-brand" href="#"><img src="images/to.jpg" class="logo"></a>
+        <button class="navbar-toggler" id="navButton" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="navbar-toggler-icon" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </button>
+<!--create collapsible menu with dropdown and search options-->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" id="menuList">
+        <li class="nav-item">
+            <a class="nav-link" href="#frontPhoto">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#myInfo">About me</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#bCard">Business Card</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#gContainer">Photo Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#techStack">techStack</a>
+        </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://krisjawor.github.io/MathGame/" target="_blank">Math Game</a>
+          <a class="dropdown-item" href="#bCard">Business Card</a>
+          <a class="dropdown-item" href="#">Tutorials Page</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input id="serchBox" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+      <!--create front image with text-->
+        <div class="jumbotron" id="frontPhoto">
+            <div class="frontContainer">
+                <div class="featured">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h1>Hi, my name is <br> <span class="name">Krzysztof Jaworski</span></h1>
+                            <h4>I'm Your new FrontEnd Developer</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--create about me section with cv button-->
+    <div class="aboutMe" id="myInfo">
+        <hr>
+        <p>My name is Krzysztof Jaworski and I'm a Junior Front-End Developer. I am studying IT at WSB in Wrocław, this is my last semester. For over a year i'm learning Front-End but between my job as a driver and school tasks i have not enough time for my new passion. Now I wish to fully devote myself to a Front-End Developer career. <br><br>
+        My main professional goal is to find a job that will give me an opportunity to extend and improve previously acquired skills, engage in interesting and creative projects and raise my Front-End development qualifications. Also, I put a lot of work to write a clear and semantically correct code.
+        <br><br>
+        I work with technologies such as <span style="color: darkred">HTML, CSS, JavaScript, jQuery, Bootstrap</span>. I know version management tolls like <span style="color: darkred">GIT, Jira, Slack</span> and can work in agile methodology like <span style="color: darkred">SCRUM and LEAN</span>, I'm also familliar with RWD and mobile first design. In future I will learn Back-End and become Fullstack Developer.
+        </p>
+        <hr>
+        <p>
+        In my sparse free time I like to travel, visiting and hiking any mountains I can afford. I cycle and walk quite a lot. While in the mountains I take lots of photos. Another thing I like to do is read fantasy and sci-fi books, watch good movies and series. Somtimes I play RPG or strategic computer games.
+        </p>
+        <a href="images/K.Jaworski.pdf"><button id="myCV" type="button" class="btn btn-primary">My CV</button></a>
+    </div>
+    <!--create responsive business card-->
+    <div class="businessCard" id="bCard">
+        <div class="businessCardHeader">
+            <p>Whant to have an Amazing Website?</p>
+        </div>
+        <div class="icons">
+            <div class="iconContainer">
+                <div class="row">
+                    <div class="col-md-4">
+                    <img src="images/contact.png" class="bodyIcon">
+                    <h2>Contact</h2>
+                    <p>Get in touch and tell me what do You need</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/price.png" class="bodyIcon">
+                    <h2>Plan and Price</h2>
+                    <p>I will carefully plan Your site and price it</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/make.png" class="bodyIcon">
+                    <h2>Make it</h2>
+                    <p>I will create beautyfull Website and maintain it for You</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--create fully responsive photogallery linkpage-->
+    <div class="galleryContainer" id="gContainer">
+        <h2 class="galleryTitle">Photo Gallery </h2>
+            <div class="photoCard" >
+                <div class="content" >
+                    <div class="image">
+                        <img src="images/3760.JPG">
+                    </div>
+                    <div class="title">
+                        Sudeten mountains
+                    </div>
+                </div>            
+                <div class="galleryInfo">
+                    <span class="infoIcon">i</span>
+                    <h2>I'm Sorry</h2>
+                    <p>
+                        This gallery is under construction, all information regard estimated time of complition will be announced on main page.
+                        Email address and telephone nummber are in footer.
+                    </p>
+                </div>
+            </div>
+            <div class="photoCard">
+                <div class="content">
+                    <div class="image">
+                        <img src="images/4270.JPG">
+                    </div>
+                    <div class="title">
+                        Tatra mountains
+                    </div>
+                </div>            
+                <div class="galleryInfo">
+                    <span class="infoIcon">i</span>
+                    <h2>I'm Sorry</h2>
+                    <p>
+                        This gallery is under construction, all information regard estimated time of complition will be announced on main page.
+                        Email address and telephone nummber are in footer.
+                    </p>
+                </div>
+            </div>
+            <div class="photoCard">
+                <div class="content">
+                    <div class="image">
+                        <img src="images/8625.JPG">
+                    </div>
+                    <div class="title">
+                        The Himalayas
+                    </div>
+                </div>            
+                <div class="galleryInfo">
+                    <span class="infoIcon">i</span>
+                    <h2>I'm Sorry</h2>
+                    <p>
+                        This gallery is under construction, all information regard estimated time of complition will be announced on main page.
+                        Email address and telephone nummber are in footer.
+                    </p>
+                </div>
+            </div>
+            <div class="photoCard">
+                <div class="content">
+                    <div class="image">
+                        <img src="images/Koruldi.jpg">
+                    </div>
+                    <div class="title">
+                        Caucasus
+                    </div>
+                </div>            
+                <div class="galleryInfo">
+                    <span class="infoIcon">i</span>
+                    <h2>I'm Sorry</h2>
+                    <p>
+                        This gallery is under construction, all information regard estimated time of complition will be announced on main page.
+                        Email address and telephone nummber are in footer.
+                    </p>
+                </div>
+            </div>
+    </div>
+    <!--create technologies part of page-->
+    <div class="tech" id="techStack">
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/120px-The_GIMP_icon_-_gnome.svg.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/110px-Unofficial_JavaScript_logo_2.svg.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/512px-JQuery-Logo.svg.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/110px-HTML5_logo_and_wordmark.svg.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Devicon-css3-plain.svg/120px-Devicon-css3-plain.svg.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/GitHub.svg/567px-GitHub.svg.png">
+            <img src="">
+        </div>
+    </div>
+      <footer class="footer">
+          <div class="foot">
+             <div class="contact"><img src="images/mail.png"><p>Krisjawor@gmail.com</p></div>
+             <div class="contact"><img src="images/net.png"><p>LinkedInn: Krzysztof Jaworski<br>https://krisjawor.github.io/MathGame/</p></div>
+             <div class="contact"><img src="images/phone.png"><p>794123572</p></div>
+          </div>
+          <span>Created my free logo at LogoMakr.com</span>
+      </footer>
+    <!--create back to top button-->
+      <a href="#" id="toTop"><i class="icon-chevron-up"></i></a>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+        <!-- Optional JavaScript -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var $toTop = $("#toTop");
+        
+        $(window).on('scroll', function(){
+            if($(this).scrollTop() > 400){         $toTop.fadeIn();
+            }else{
+                $toTop.fadeOut();
+            }
+        });
+        $toTop.on('click', function(e){
+            $('html,body').animate({scrollTop:0}, 1000); 
+            
+        }) 
+    });
+    </script>
+    <script>
+        function myFunction(x){
+            x.classList.toggle("change")
+        }  
+    </script>
+    <!--<script>
+        $("#navButton").on("click", function () {
+        $("#menuList").toggle();
+        });
+        $(".nav-item").on("click", function(){
+        $("#menuList").hide();
+        });
+    </script>-->
+      
+  </body>
+</html>
